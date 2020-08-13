@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+}
+.small {
+  position: absolute;
+  right: 5%;
+  transform: rotate(40deg);
+  z-index: -1000;
+}
+
+.mid{
+  position: absolute;
+  left: 40%;
+  bottom: 5%;
+  z-index: -1000;
+}
+
+
+
+.container{
+  height: 100vh;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo-wrapper{
+  display: flex;
+}
+
+.logo-wrapper .logo{
+  height: 30px;
+
+}
+
+.logo-wrapper .logo img{
+  width: 30px;
+  height: 70%;
+  background-color: transparent;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: purple;
+}
+
+.shop-bucket{
+  background-color:lightgrey;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+section{
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.text h2 {
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.laptop{
+  height: 300px;
+  z-index: 1;
+}
+
+.buttons{
+  display: flex;
+  width: 100%;
+  
+  margin-top: 30px;
+  gap: 20px;
+}
+
+select{
+  height: 40px;
+  width: 85px;
+  color: purple;
+  border: 1px solid purple;
+  border-radius: 2px;
+  outline: 0;
+  cursor: pointer;
+}
+
+
+button{
+  color: white;
+  background-color: purple;
+  outline: 0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.laptop-slider{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptop-slider img{
+  cursor: pointer;
+}
+
+@media (max-width:1000px){
+  section{
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .mid,.small{
+    display: none;
+  }
+  .laptop{
+    height: 250px;
+  }
+}
