@@ -32,10 +32,34 @@ tl.from('.laptop-slider',{
 },"=-1")
 
 
-const laptops = ["matebook","matebook2"];
+
+
+
 //DOM 
-document.querySelector('.left-arrow').addEventListener('click', () => {
-    laptops.forEach((laptop)=>{
-        document.querySelector('.laptop').src = `/img/${laptop}.png`
+
+
+var laptopslideshow = w3.slideshow(".laptop",0);
+
+var tl2 = gsap.timeline();
+
+document.querySelector('.left-arrow').addEventListener('click',()=>{
+    laptopslideshow.previous();
+    tl2.from('.laptop',{
+        duration:1,
+        x:70
     })
 })
+
+document.querySelector('.right-arrow').addEventListener('click',()=>{
+    laptopslideshow.next();
+    tl2.from('.laptop',{
+        duration:1,
+        x:-70
+    })
+})
+
+document.querySelector('button').addEventListener('click',()=>{
+    tl.reverse();
+})
+
+
